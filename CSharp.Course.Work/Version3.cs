@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CSharp.Course.Work.VersionThree;
+using System.Linq.Expressions;
 
 namespace CSharp.Course.Work
 {
@@ -143,10 +144,25 @@ namespace CSharp.Course.Work
             await asyncLambda(1);
         }
 
+        /// <summary>
+        /// https://docs.microsoft.com/en-us/dotnet/articles/csharp/expression-trees-explained
+        /// </summary>
         [Test]
         public void ExpressionTrees()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+
+            Expression<Func<int>> add = () => 1 + 2;
+            var func = add.Compile();
+            var results = func();
+
+            Assert.AreEqual(3, results);
+
+            Expression<Func<int, int, bool>> greaterThan = (x, y) => x > y;
+            var funcGreaterThan = greaterThan.Compile();
+
+            Assert.IsTrue(funcGreaterThan(2, 1));
+            Assert.IsFalse(funcGreaterThan(1, 2));
         }
 
         [Test]
