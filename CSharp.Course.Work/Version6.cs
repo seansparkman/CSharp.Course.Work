@@ -33,9 +33,24 @@ namespace CSharp.Course.Work
         }
 
         [Test]
-        public void AwaitInCatchFinallyBlocks()
+        public async Task AwaitInCatchFinallyBlocks()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+
+            Func<Task> awaitMe = async () => await Task.Delay(1);
+            try
+            {
+                throw new Exception();
+            }
+            catch(Exception ex)
+            {
+                await awaitMe();
+            }
+            finally
+            {
+                await awaitMe();
+            }
+
         }
 
         [Test]
