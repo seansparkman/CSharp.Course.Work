@@ -66,10 +66,22 @@ namespace CSharp.Course.Work
             Assert.IsTrue(listOfInt.Contains(10));
         }
 
+        /// <summary>
+        /// https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/classes-and-structs/auto-implemented-properties
+        /// </summary>
         [Test]
         public void AutoImplementedProperties()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+
+            var autoImplementedProperties = new VersionThree.AutoImplementedProperties
+            {
+                IntProperty = 42,
+                StringProperty = "This is a string"
+            };
+
+            Assert.AreEqual("This is a string", autoImplementedProperties.StringProperty);
+            Assert.AreEqual(42, autoImplementedProperties.IntProperty);
         }
 
         [Test]
