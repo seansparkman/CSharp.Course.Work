@@ -68,6 +68,9 @@ namespace CSharp.Course.Work
             Assert.AreEqual("C", listOfAnswers[2]);
         }
 
+        /// <summary>
+        /// https://docs.microsoft.com/en-us/dotnet/articles/csharp/whats-new/csharp-7#ref-locals-and-returns
+        /// </summary>
         [Test]
         public void RefReturns()
         {
