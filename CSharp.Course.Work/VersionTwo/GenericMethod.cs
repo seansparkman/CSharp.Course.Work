@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 
 namespace CSharp.Course.Work.VersionTwo
 {
-    /// <summary>    /// 
-    /// <see href="https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/generics/generic-methods">More here</see>
-    /// </summary>
     public class GenericMethod
     {
         public static T Result<T>() where T : GenericMethodClassA, new()

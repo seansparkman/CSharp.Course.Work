@@ -17,6 +17,9 @@ namespace CSharp.Course.Work
         }
 
 
+        /// <summary>
+        /// <see href="https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/generics/generic-methods">More here</see>
+        /// </summary>
         [Test]
         public void GenericMethod()
         {
