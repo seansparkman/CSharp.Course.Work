@@ -8,18 +8,19 @@ namespace CSharp.Course.Work.VersionFive
 {
     public static class CallInfoAttributes
     {
-        public static CallInformation CallInfo(
-            [System.Runtime.CompilerServices.CallerMemberName] string memberName = "",
-            [System.Runtime.CompilerServices.CallerFilePath] string sourceFilePath = "",
-            [System.Runtime.CompilerServices.CallerLineNumber] int sourceLineNumber = 0)
-        {
-            return new CallInformation
-            {
-                CallerMemberName = memberName,
-                CallerFilePath = sourceFilePath,
-                CallerLineNumber = sourceLineNumber
-            };
-        }
+        // TODO: Uncomment this method
+        //public static CallInformation CallInfo(
+        //    [System.Runtime.CompilerServices.CallerMemberName] string memberName = "",
+        //    [System.Runtime.CompilerServices.CallerFilePath] string sourceFilePath = "",
+        //    [System.Runtime.CompilerServices.CallerLineNumber] int sourceLineNumber = 0)
+        //{
+        //    return new CallInformation
+        //    {
+        //        CallerMemberName = memberName,
+        //        CallerFilePath = sourceFilePath,
+        //        CallerLineNumber = sourceLineNumber
+        //    };
+        //}
     }
 
     public class CallInformation

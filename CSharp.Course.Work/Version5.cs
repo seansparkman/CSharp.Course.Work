@@ -23,9 +23,12 @@ namespace CSharp.Course.Work
         [Test]
         public async Task AsynchronousMethods()
         {
-            // Assert.Ignore();
+            Assert.Ignore();
 
-            await VersionFive.AsynchronousMethods.AsyncMethod();
+            // TODO: Uncomment this line
+            //await VersionFive.AsynchronousMethods.AsyncMethod();
+
+            Assert.Pass();
         }
 
         /// <summary>
@@ -36,7 +39,8 @@ namespace CSharp.Course.Work
         {
             // Assert.Ignore();
 
-            var callerInfo = VersionFive.CallInfoAttributes.CallInfo();
+            // TODO: Uncomment this line
+            //var callerInfo = VersionFive.CallInfoAttributes.CallInfo();
 
             Assert.AreEqual("CallerInfoAttribute", callerInfo.CallerMemberName);
             Assert.Less(0, callerInfo.CallerLineNumber);

@@ -8,9 +8,6 @@ namespace CSharp.Course.Work.VersionFive
 {
     public static class AsynchronousMethods
     {
-        public async static Task AsyncMethod()
-        {
-            await Task.Delay(1);
-        }
+        // TODO: Implement static method AsyncMethod and await Task.Delay(1)
     }
 }
