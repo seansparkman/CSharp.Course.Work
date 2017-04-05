@@ -59,6 +59,7 @@
     <Compile Include="VersionSix\AutoPropertyInitializers.cs" />
     <Compile Include="VersionFive\AsynchronousMethods.cs" />
     <Compile Include="VersionFive\CallInfoAttributes.cs" />
+    <Compile Include="VersionSix\ExpressionBodiedMembers.cs" />
     <Compile Include="VersionThree\AutoImplementedProperties.cs" />
     <Compile Include="VersionThree\ExtensionMethods.cs" />
     <Compile Include="VersionFour\NamedAndOptionalParameters.cs" />

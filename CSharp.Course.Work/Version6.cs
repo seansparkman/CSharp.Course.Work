@@ -73,15 +73,14 @@ namespace CSharp.Course.Work
         }
 
         [Test]
-        public void DefaultValuesForGetterOnlyProperties()
-        {
-            Assert.Ignore();
-        }
-
-        [Test]
         public void ExpressionBodiedMembers()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+
+            var obj = new VersionSix.ExpressionBodiedMembers();
+
+            Assert.AreEqual("This is a string", obj.GetString());
+            Assert.AreEqual(42, obj.SquareFeet(6, 7));
         }
 
         [Test]
