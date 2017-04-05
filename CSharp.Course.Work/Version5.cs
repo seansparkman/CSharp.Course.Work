@@ -22,10 +22,18 @@ namespace CSharp.Course.Work
             await VersionFive.AsynchronousMethods.AsyncMethod();
         }
 
+        /// <summary>
+        /// https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/concepts/caller-information
+        /// </summary>
         [Test]
         public void CallerInfoAttribute()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+
+            var callerInfo = VersionFive.CallInfoAttributes.CallInfo();
+
+            Assert.AreEqual("CallerInfoAttribute", callerInfo.CallerMemberName);
+            Assert.Less(0, callerInfo.CallerLineNumber);
         }
     }
 }
