@@ -141,8 +141,8 @@ namespace CSharp.Course.Work
             var accessibility = new VersionTwo.GetterSetterSeparateAccessibility();
             accessibility.Value2 = 2;
 
-            Assert.Equals(1, accessibility.Value1);
-            Assert.Equals(2, accessibility.GetValue2());
+            Assert.AreEqual(1, accessibility.Value1);
+            Assert.AreEqual(2, accessibility.GetValue2());
         }
 
         [Test]
