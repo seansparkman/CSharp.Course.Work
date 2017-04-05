@@ -18,10 +18,12 @@ namespace CSharp.Course.Work.VersionSeven
 
             return Multiply(height, width);
 
-            int Multiply(int x, int y)
-            {
-                return x * y;
-            }
+            // TODO: Move the Multiply function here and remove the static from the signature
+        }
+
+        static int Multiply(int x, int y)
+        {
+            return x * y;
         }
 
         public static async Task<int> DoSomething()
@@ -29,11 +31,13 @@ namespace CSharp.Course.Work.VersionSeven
             // code some logic here...
             return await Wait();
 
-            async Task<int> Wait()
-            {
-                await Task.Delay(1);
-                return 42;
-            }
+            // TODO: move the Wait method here and remove the static from the signature
+        }
+
+        static async Task<int> Wait()
+        {
+            await Task.Delay(1);
+            return 42;
         }
     }
 }

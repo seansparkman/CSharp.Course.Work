@@ -8,10 +8,11 @@ namespace CSharp.Course.Work.VersionSeven
 {
     public static class RefReturns
     {
-        public static ref char GetRef(char[] list, int index)
-        {
-            return ref list[index];
-        }
-
+        // TODO: Implement static ref method of GetRef that returns char
+        // parameters are as follows
+        // char[] list
+        // int index
+        // the body is as follows
+        // return ref list[index];
     }
 }

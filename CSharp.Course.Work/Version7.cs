@@ -22,7 +22,7 @@ namespace CSharp.Course.Work
         [Test]
         public async Task LocalFunctions()
         {
-            // Assert.Ignore();
+            Assert.Ignore();
             
             Assert.AreEqual(42, VersionSeven.LocalFunctions.SquareFeet(6, 7));
             Assert.AreEqual(42, await VersionSeven.LocalFunctions.DoSomething());
@@ -31,7 +31,7 @@ namespace CSharp.Course.Work
         [Test]
         public void TypeSwitch()
         {
-            // Assert.Ignore();
+            Assert.Ignore();
 
             var listOfObjs = new List<VersionSeven.TypeSwitchA>
             {
@@ -45,18 +45,15 @@ namespace CSharp.Course.Work
             {
                 switch(item)
                 {
-                    case VersionSeven.TypeSwitchC c:
-                        listOfAnswers.Add("C");
-                        break;
-                    case VersionSeven.TypeSwitchB b:
-                        listOfAnswers.Add("B");
-                        break;
-                    case VersionSeven.TypeSwitchA a:
-                        listOfAnswers.Add("A");
-                        break;
+                    // TODO: Implement cases as follows
+                    // first case of VersionSeven.TypeSwitchC
+                    //    add "C" to listOfAnswers
+                    // second case of VersionSeven.TypeSwitchB
+                    //    add "B" to listOfAnswers
+                    // last case of VersionSeven.TypeSwitchA
+                    //    add "A" to listOfAnswers
 
-                    // uncomment to see the compiler error
-
+                    // uncomment to see the compiler error after implementing cases
                     //case VersionSeven.TypeSwitchB b:
                     //    listOfAnswers.Add("B");
                     //    break;
@@ -74,15 +71,16 @@ namespace CSharp.Course.Work
         [Test]
         public void RefReturns()
         {
-            // Assert.Ignore();
-            char[] results = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToArray();
+            Assert.Ignore();
+            // TODO: Uncomment the following lines
+            //char[] results = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToArray();
 
-            Assert.AreEqual('D', results[3]);
+            //Assert.AreEqual('D', results[3]);
             
-            ref var d = ref VersionSeven.RefReturns.GetRef(results, 3);
-            d = 'd';
+            //ref var d = ref VersionSeven.RefReturns.GetRef(results, 3);
+            //d = 'd';
 
-            Assert.AreEqual('d', results[3]);
+            //Assert.AreEqual('d', results[3]);
         }
 
         /// <summary>
@@ -91,12 +89,13 @@ namespace CSharp.Course.Work
         [Test]
         public void NamedTuples()
         {
-            // Assert.Ignore();
+            Assert.Ignore();
 
-            (int x, int y) p = VersionSeven.NamedTuples.GetPoint();
+            // TODO: Uncomment the following lines
+            //(int x, int y) p = VersionSeven.NamedTuples.GetPoint();
 
-            Assert.AreEqual(7, p.x);
-            Assert.AreEqual(42, p.y);
+            //Assert.AreEqual(7, p.x);
+            //Assert.AreEqual(42, p.y);
         }
 
         /// <summary>
@@ -105,22 +104,24 @@ namespace CSharp.Course.Work
         [Test]
         public void OutVar()
         {
-            // Assert.Ignore();
+            Assert.Ignore();
 
-            if (int.TryParse("42", out int result))
-            {
-                Assert.AreEqual(42, result);
-            }
-            else
-            {
-                Assert.Fail();
-            }
+            // TODO: Replace the if condition with int.TryParse and try parsing "42"
+            // Use the out var with int result
+            //if (/*replace me*/)
+            //{
+            //    Assert.AreEqual(42, result);
+            //}
+            //else
+            //{
+            //    Assert.Fail();
+            //}
         }
 
         [Test]
         public void ExpressionBodiedGettersAndSetters()
         {
-            // Assert.Ignore();
+            Assert.Ignore();
 
             var obj = new VersionSeven.ExpressionBodied("This is a string");
 
@@ -134,7 +135,7 @@ namespace CSharp.Course.Work
         [Test]
         public void ExpressionBodiedConstructors()
         {
-            // Assert.Ignore();
+            Assert.Ignore();
 
             var obj = new VersionSeven.ExpressionBodied("This is a string");
 

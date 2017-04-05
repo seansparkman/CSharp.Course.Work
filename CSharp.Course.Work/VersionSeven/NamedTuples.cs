@@ -8,9 +8,7 @@ namespace CSharp.Course.Work.VersionSeven
 {
     public static class NamedTuples
     {
-        public static (int x, int y) GetPoint()
-        {
-            return (7, 42);
-        }
+        // TODO: Implement method of GetPoint and return named tuple of (int x, int y)
+        // have the method return (7, 42)
     }
 }

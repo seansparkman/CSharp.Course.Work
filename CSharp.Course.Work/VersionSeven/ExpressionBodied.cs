@@ -8,15 +8,19 @@ namespace CSharp.Course.Work.VersionSeven
 {
     public class ExpressionBodied
     {
-        public ExpressionBodied(string value) => this.Value = value;
-        ~ExpressionBodied() => Console.WriteLine("FINALLY DONE");
+        // TODO: Convert the constructor to an expression
+        public ExpressionBodied(string value)
+        {
+            this.Value = value;
+        }
+        ~ExpressionBodied()
+        {
+            Console.WriteLine("FINALLY DONE");
+        }
 
         private string value;
 
-        public string Value
-        {
-            get => value;
-            set => this.value = value;
-        }
+        // TODO: Convert this property to property expression
+        public string Value { get; set; }
     }
 }
