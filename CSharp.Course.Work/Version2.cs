@@ -53,10 +53,17 @@ namespace CSharp.Course.Work
             Assert.IsTrue(result.Results is List<string>);
         }
 
+        /// <summary>
+        /// https://docs.microsoft.com/en-us/dotnet/articles/csharp/language-reference/keywords/partial-type
+        /// </summary>
         [Test]
         public void PartialTypes()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+
+            var partialClass = new VersionTwo.PartialClass();
+
+            Assert.AreEqual("Partial Class 2", partialClass.FirstClass());
         }
 
         [Test]
