@@ -97,7 +97,13 @@ namespace CSharp.Course.Work
         [Test]
         public void StringInterpolation()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+
+            var obj = new { StringProperty = "This is a string", IntProperty = 42, ObjectProperty = new { AnotherProperty = "Yes, another property" } };
+
+            var results = $"First: {obj?.StringProperty}, {obj?.IntProperty}, Second: {obj?.ObjectProperty?.AnotherProperty}";
+
+            Assert.AreEqual("First: This is a string, 42, Second: Yes, another property", results);
         }
 
         [Test]
