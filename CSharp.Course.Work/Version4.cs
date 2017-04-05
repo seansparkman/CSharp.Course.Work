@@ -31,10 +31,24 @@ namespace CSharp.Course.Work
             Assert.AreEqual("Yes, another property", obj.ObjectProperty.AnotherProperty);
         }
 
+        /// <summary>
+        /// https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/classes-and-structs/named-and-optional-arguments
+        /// </summary>
         [Test]
         public void NamedAndOptionalParameters()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+            Assert.AreEqual(42, VersionFour.NamedAndOptionalParameters.SquareFeet(6, 7));
+            Assert.AreEqual(42, VersionFour.NamedAndOptionalParameters.SquareFeet(height: 6, width: 7));
+            Assert.AreEqual(42, VersionFour.NamedAndOptionalParameters.SquareFeet(width: 7, height: 6));
+
+            var spams = VersionFour.NamedAndOptionalParameters.Repeat("Spam", 30);
+
+            Assert.AreEqual(29 + 30 * 4, spams.Length);
+
+            spams = VersionFour.NamedAndOptionalParameters.Repeat("Spam");
+            
+            Assert.AreEqual(1 + 2 * 4, spams.Length);
         }
 
         [Test]
