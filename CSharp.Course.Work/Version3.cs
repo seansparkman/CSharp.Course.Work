@@ -84,10 +84,20 @@ namespace CSharp.Course.Work
             Assert.AreEqual(42, autoImplementedProperties.IntProperty);
         }
 
+        /// <summary>
+        /// https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/classes-and-structs/anonymous-types
+        /// </summary>
         [Test]
         public void AnonymousTypes()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+
+            var obj = new { StringProperty = "This is a string", IntProperty = 42, ObjectProperty = new { AnotherProperty = "Yes, another property" } };
+
+            Assert.AreEqual("This is a string", obj.StringProperty);
+            Assert.AreEqual(42, obj.IntProperty);
+            Assert.IsNotNull(obj.ObjectProperty);
+            Assert.AreEqual("Yes, another property", obj.ObjectProperty.AnotherProperty);
         }
 
         [Test]
