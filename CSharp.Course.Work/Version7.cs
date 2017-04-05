@@ -120,13 +120,25 @@ namespace CSharp.Course.Work
         [Test]
         public void ExpressionBodiedGettersAndSetters()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+
+            var obj = new VersionSeven.ExpressionBodied("This is a string");
+
+            Assert.AreEqual("This is a string", obj.Value);
+
+            obj.Value = "This is not a string";
+
+            Assert.AreEqual("This is not a string", obj.Value);
         }
 
         [Test]
-        public void ExpressionBodiedConstructorsAndFinalizers()
+        public void ExpressionBodiedConstructors()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+
+            var obj = new VersionSeven.ExpressionBodied("This is a string");
+
+            Assert.AreEqual("This is a string", obj.Value);
         }
     }
 }
