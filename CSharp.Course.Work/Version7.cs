@@ -16,22 +16,16 @@ namespace CSharp.Course.Work
             Setup.Results.Add(TestContext.CurrentContext.Result);
         }
 
+        /// <summary>
+        /// https://docs.microsoft.com/en-us/dotnet/articles/csharp/whats-new/csharp-7#local-functions
+        /// </summary>
         [Test]
-        public void BinaryLiterals()
+        public async Task LocalFunctions()
         {
-            Assert.Ignore();
-        }
-
-        [Test]
-        public void DigitSeparators()
-        {
-            Assert.Ignore();
-        }
-
-        [Test]
-        public void LocalFunctions()
-        {
-            Assert.Ignore();
+            // Assert.Ignore();
+            
+            Assert.AreEqual(42, VersionSeven.LocalFunctions.SquareFeet(6, 7));
+            Assert.AreEqual(42, await VersionSeven.LocalFunctions.DoSomething());
         }
 
         [Test]
