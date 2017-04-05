@@ -100,7 +100,14 @@ namespace CSharp.Course.Work
         {
             // Assert.Ignore();
 
-            var obj = new { StringProperty = "This is a string", IntProperty = 42, ObjectProperty = new { AnotherProperty = "Yes, another property" } };
+            var obj = new {
+                StringProperty = "This is a string",
+                IntProperty = 42,
+                ObjectProperty = new { AnotherProperty = "Yes, another property" }
+            };
+            
+            // uncomment to show compiler error
+            // obj.StringProperty = "This isn't a string";
 
             Assert.AreEqual("This is a string", obj.StringProperty);
             Assert.AreEqual(42, obj.IntProperty);
