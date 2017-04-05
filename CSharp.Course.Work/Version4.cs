@@ -66,23 +66,5 @@ namespace CSharp.Course.Work
 
             Assert.AreEqual(1 + 2 * 4, spams.Length);
         }
-
-        [Test]
-        public void GenericCovariance()
-        {
-            Assert.Ignore();
-        }
-
-        [Test]
-        public void GenericContravariance()
-        {
-            Assert.Ignore();
-        }
-
-        [Test]
-        public void EmbeddedInteropTypes()
-        {
-            Assert.Ignore();
-        }
     }
 }
