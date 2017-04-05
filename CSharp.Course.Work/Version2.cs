@@ -148,7 +148,15 @@ namespace CSharp.Course.Work
         [Test]
         public void MethodGroupConversions()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+            var methodGroup = new VersionTwo.MethodGroupConversions
+            {
+                Value = "original"
+            };
+
+            methodGroup.DoSomething(methodGroup.Work);
+
+            Assert.AreEqual("original did work", methodGroup.Value);
         }
 
         [Test]
