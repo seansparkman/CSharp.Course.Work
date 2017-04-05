@@ -114,6 +114,9 @@ namespace CSharp.Course.Work
             Assert.AreEqual(4, iterator.Iterations);
         }
 
+        /// <summary>
+        /// https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/nullable-types/
+        /// </summary>
         [Test]
         public void NullableTypes()
         {
