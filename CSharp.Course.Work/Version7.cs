@@ -118,12 +118,6 @@ namespace CSharp.Course.Work
         }
 
         [Test]
-        public void ArbitraryAsyncReturns()
-        {
-            Assert.Ignore();
-        }
-
-        [Test]
         public void ExpressionBodiedGettersAndSetters()
         {
             Assert.Ignore();
