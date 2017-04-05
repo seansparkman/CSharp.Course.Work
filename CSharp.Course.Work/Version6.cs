@@ -22,17 +22,15 @@ namespace CSharp.Course.Work
         [Test]
         public void ExceptionFilters()
         {
-            // Assert.Ignore();
+            Assert.Ignore();
 
             try
             {
                 throw new ArgumentException("Invalid argument", "args");
             }
-            catch(ArgumentException e) when (e.ParamName == "args")
-            {
-                Assert.Pass();
-            }
-            catch(ArgumentException e) when (e.ParamName != "args")
+            // TODO: add exception filter with when of condition ParamName equal to "args"
+            // and Assert.Pass in that catch block
+            catch(ArgumentException e)
             {
                 Assert.Fail();
             }
@@ -41,7 +39,7 @@ namespace CSharp.Course.Work
         [Test]
         public async Task AwaitInCatchFinallyBlocks()
         {
-            // Assert.Ignore();
+            Assert.Ignore();
 
             Func<Task> awaitMe = async () => await Task.Delay(1);
             try
@@ -50,11 +48,11 @@ namespace CSharp.Course.Work
             }
             catch(Exception ex)
             {
-                await awaitMe();
+                // TODO: await the awaitMe method
             }
             finally
             {
-                await awaitMe();
+                // TODO: await the awaitMe method
             }
 
         }
@@ -62,7 +60,7 @@ namespace CSharp.Course.Work
         [Test]
         public void AutoPropertyInitializers()
         {
-            // Assert.Ignore();
+            Assert.Ignore();
 
             var obj = new VersionSix.AutoPropertyInitializers();
 
@@ -75,7 +73,7 @@ namespace CSharp.Course.Work
         [Test]
         public void ExpressionBodiedMembers()
         {
-            // Assert.Ignore();
+            Assert.Ignore();
 
             var obj = new VersionSix.ExpressionBodiedMembers();
 
@@ -86,12 +84,14 @@ namespace CSharp.Course.Work
         [Test]
         public void NullPropagator()
         {
-            // Assert.Ignore();
+            Assert.Ignore();
 
             var obj = new VersionSix.NullPropagator();
 
-            Assert.IsNull(obj?.StringProperty?.Length);
-            Assert.AreEqual(0, obj?.StringProperty?.Length ?? 0);
+            // TODO: replace . operator with ?. 
+            Assert.IsNull(obj.StringProperty.Length);
+            // TODO: add  ?? 0 after Length after replacing . operator with ?.
+            Assert.AreEqual(0, obj.StringProperty.Length);
         }
 
         /// <summary>
@@ -100,11 +100,13 @@ namespace CSharp.Course.Work
         [Test]
         public void StringInterpolation()
         {
-            // Assert.Ignore();
+            Assert.Ignore();
 
             var obj = new { StringProperty = "This is a string", IntProperty = 42, ObjectProperty = new { AnotherProperty = "Yes, another property" } };
 
-            var results = $"First: {obj?.StringProperty}, {obj?.IntProperty}, Second: {obj?.ObjectProperty?.AnotherProperty}";
+            // TODO: use string interpolation to generate a string from the obj to match the assert
+            // and assign it to the results variable
+            var results = default(string);
 
             Assert.AreEqual("First: This is a string, 42, Second: Yes, another property", results);
         }
@@ -115,7 +117,7 @@ namespace CSharp.Course.Work
         [Test]
         public void NameofOperator()
         {
-            // Assert.Ignore();
+            Assert.Ignore();
 
             var obj = new VersionSix.NameofOperator();
 
@@ -129,14 +131,13 @@ namespace CSharp.Course.Work
         [Test]
         public void DictionaryInitializer()
         {
-            // Assert.Ignore();
+            Assert.Ignore();
 
-            var dictionary = new Dictionary<int, string>
-            {
-                { 1, "One" },
-                { 2, "Two" },
-                { 3, "Three" }
-            };
+            // TODO: initialize dictionary with the following
+            // 1 as "One"
+            // 2 as "Two"
+            // 3 as "Three"
+            var dictionary = new Dictionary<int, string>();
 
             Assert.AreEqual("One", dictionary[1]);
             Assert.AreEqual("Two", dictionary[2]);

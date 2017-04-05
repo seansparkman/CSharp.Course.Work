@@ -8,13 +8,15 @@ namespace CSharp.Course.Work.VersionSix
 {
     public class NameofOperator
     {
+        // TODO: replace the string with a nameof operator at the calling property
         public string StringProperty
         {
-            get { return nameof(StringProperty); }
+            get { return "StringProperty"; }
         }
+        // TODO: replace the string with a nameof operator at the calling property
         public string IntProperty
         {
-            get { return nameof(IntProperty); }
+            get { return "IntProperty"; }
         }
     }
 }

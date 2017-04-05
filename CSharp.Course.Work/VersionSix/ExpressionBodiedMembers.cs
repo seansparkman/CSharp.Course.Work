@@ -8,7 +8,15 @@ namespace CSharp.Course.Work.VersionSix
 {
     public class ExpressionBodiedMembers
     {
-        public string GetString() => "This is a string";
-        public int SquareFeet(int height, int width) => height * width;
+        // TODO: Convert this to an expression bodied member using lambda
+        public string GetString()
+        {
+            return "This is a string";
+        }
+        // TODO: Convert this to an expression bodied member using lambda
+        public int SquareFeet(int height, int width)
+        {
+            return height* width;
+        }
     }
 }

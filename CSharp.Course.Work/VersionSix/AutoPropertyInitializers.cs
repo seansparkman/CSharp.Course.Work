@@ -8,13 +8,13 @@ namespace CSharp.Course.Work.VersionSix
 {
     public class AutoPropertyInitializers
     {
-
-        public string StringProperty { get; } = "This is a string";
-        public int IntProperty { get; } = 42;
-        public AutoPropertyInitializers2 ObjectProperty { get; } = new AutoPropertyInitializers2
-        {
-            AnotherProperty = "Yes, another property"
-        };
+        // TODO: set StringProperty to "This is a string" by default
+        public string StringProperty { get; }
+        // TODO: Set IntProperty to 42 by default
+        public int IntProperty { get; }
+        // TODO: Set ObjectProperty to a new AutoPropertyInitializers2 and
+        // assign AnotherProperty with "Yes, another property"
+        public AutoPropertyInitializers2 ObjectProperty { get; }
     }
 
     public class AutoPropertyInitializers2
