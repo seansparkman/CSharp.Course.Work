@@ -62,7 +62,14 @@ namespace CSharp.Course.Work
         [Test]
         public void AutoPropertyInitializers()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+
+            var obj = new VersionSix.AutoPropertyInitializers();
+
+            Assert.AreEqual("This is a string", obj.StringProperty);
+            Assert.AreEqual(42, obj.IntProperty);
+            Assert.IsNotNull(obj.ObjectProperty);
+            Assert.AreEqual("Yes, another property", obj.ObjectProperty.AnotherProperty);
         }
 
         [Test]
