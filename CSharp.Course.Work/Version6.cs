@@ -123,6 +123,9 @@ namespace CSharp.Course.Work
             Assert.AreEqual("IntProperty", obj.IntProperty);
         }
 
+        /// <summary>
+        /// https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer
+        /// </summary>
         [Test]
         public void DictionaryInitializer()
         {
