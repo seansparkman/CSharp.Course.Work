@@ -20,7 +20,13 @@ namespace CSharp.Course.Work
         [Test]
         public void GenericMethod()
         {
-            Assert.Ignore();
+            //Assert.Ignore();
+
+            var a = VersionTwo.GenericMethod.Result<VersionTwo.GenericMethodClassA>();
+            var b = VersionTwo.GenericMethod.Result<VersionTwo.GenericMethodClassB>();
+
+            Assert.AreEqual("A", a.Result());
+            Assert.AreEqual("B", b.Result());
         }
 
         [Test]
