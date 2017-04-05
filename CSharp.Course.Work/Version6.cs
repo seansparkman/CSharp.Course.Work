@@ -126,7 +126,18 @@ namespace CSharp.Course.Work
         [Test]
         public void DictionaryInitializer()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+
+            var dictionary = new Dictionary<int, string>
+            {
+                { 1, "One" },
+                { 2, "Two" },
+                { 3, "Three" }
+            };
+
+            Assert.AreEqual("One", dictionary[1]);
+            Assert.AreEqual("Two", dictionary[2]);
+            Assert.AreEqual("Three", dictionary[3]);
         }
     }
 }
