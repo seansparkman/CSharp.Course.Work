@@ -134,7 +134,12 @@ namespace CSharp.Course.Work
         [Test]
         public void GetterSetterSeparateAccessibility()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+            var accessibility = new VersionTwo.GetterSetterSeparateAccessibility();
+            accessibility.Value2 = 2;
+
+            Assert.Equals(1, accessibility.Value1);
+            Assert.Equals(2, accessibility.GetValue2());
         }
 
         [Test]

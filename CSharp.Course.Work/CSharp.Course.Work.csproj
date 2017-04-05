@@ -65,6 +65,7 @@
     <Compile Include="Version6.cs" />
     <Compile Include="Version7.cs" />
     <Compile Include="VersionTwo\GenericTypes.cs" />
+    <Compile Include="VersionTwo\GetterSetterSeparateAccessibility.cs" />
     <Compile Include="VersionTwo\Iterators.cs" />
     <Compile Include="VersionTwo\PartialClass.cs" />
   </ItemGroup>
