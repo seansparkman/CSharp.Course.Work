@@ -37,13 +37,13 @@ namespace CSharp.Course.Work
         [Test]
         public void CallerInfoAttribute()
         {
-            // Assert.Ignore();
+            Assert.Ignore();
 
-            // TODO: Uncomment this line
+            // TODO: Uncomment these line
             //var callerInfo = VersionFive.CallInfoAttributes.CallInfo();
 
-            Assert.AreEqual("CallerInfoAttribute", callerInfo.CallerMemberName);
-            Assert.Less(0, callerInfo.CallerLineNumber);
+            //Assert.AreEqual("CallerInfoAttribute", callerInfo.CallerMemberName);
+            //Assert.Less(0, callerInfo.CallerLineNumber);
         }
     }
 }

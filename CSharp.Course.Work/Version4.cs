@@ -23,18 +23,20 @@ namespace CSharp.Course.Work
         [Test]
         public void DynamicBinding()
         {
-            // Assert.Ignore();
+            Assert.Ignore();
 
             dynamic obj = new ExpandoObject();
-            obj.StringProperty = "This is a string";
-            obj.IntProperty = 42;
-            obj.ObjectProperty = new ExpandoObject();
-            obj.ObjectProperty.AnotherProperty = "Yes, another property";
+            // TODO: implement the following properties on object: obj
+            // StringProperty = "This is a string"
+            // IntProperty = 42
+            // ObjectProperty assign new ExpandoObject
+            // Add property ObjectProperty of AnotherProperty = "Yes, another property"
 
-            Assert.AreEqual("This is a string", obj.StringProperty);
-            Assert.AreEqual(42, obj.IntProperty);
-            Assert.IsNotNull(obj.ObjectProperty);
-            Assert.AreEqual("Yes, another property", obj.ObjectProperty.AnotherProperty);
+            // TODO: Uncomment these tests
+            //Assert.AreEqual("This is a string", obj.StringProperty);
+            //Assert.AreEqual(42, obj.IntProperty);
+            //Assert.IsNotNull(obj.ObjectProperty);
+            //Assert.AreEqual("Yes, another property", obj.ObjectProperty.AnotherProperty);
         }
 
         /// <summary>
@@ -43,11 +45,11 @@ namespace CSharp.Course.Work
         [Test]
         public void NamedParameters()
         {
-            // Assert.Ignore();
+            Assert.Ignore();
 
-            Assert.AreEqual(42, VersionFour.NamedAndOptionalParameters.SquareFeet(6, 7));
-            Assert.AreEqual(42, VersionFour.NamedAndOptionalParameters.SquareFeet(height: 6, width: 7));
-            Assert.AreEqual(42, VersionFour.NamedAndOptionalParameters.SquareFeet(width: 7, height: 6));
+            //Assert.AreEqual(42, VersionFour.NamedAndOptionalParameters.SquareFeet(6, 7));
+            //Assert.AreEqual(42, VersionFour.NamedAndOptionalParameters.SquareFeet(height: 6, width: 7));
+            //Assert.AreEqual(42, VersionFour.NamedAndOptionalParameters.SquareFeet(width: 7, height: 6));
         }
 
         /// <summary>
@@ -56,15 +58,15 @@ namespace CSharp.Course.Work
         [Test]
         public void OptionalParameters()
         {
-            // Assert.Ignore();
+            Assert.Ignore();
 
-            var spams = VersionFour.NamedAndOptionalParameters.Repeat("Spam", 30);
+            //var spams = VersionFour.NamedAndOptionalParameters.Repeat("Spam", 30);
 
-            Assert.AreEqual(29 + 30 * 4, spams.Length);
+            //Assert.AreEqual(29 + 30 * 4, spams.Length);
 
-            spams = VersionFour.NamedAndOptionalParameters.Repeat("Spam");
+            //spams = VersionFour.NamedAndOptionalParameters.Repeat("Spam");
 
-            Assert.AreEqual(1 + 2 * 4, spams.Length);
+            //Assert.AreEqual(1 + 2 * 4, spams.Length);
         }
     }
 }
