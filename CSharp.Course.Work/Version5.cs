@@ -10,10 +10,16 @@ namespace CSharp.Course.Work
     [TestFixture]
     public class Version5
     {
+        /// <summary>
+        /// https://docs.microsoft.com/en-us/dotnet/articles/csharp/async
+        /// </summary>
+        /// <returns></returns>
         [Test]
-        public void AsynchronousMethods()
+        public async Task AsynchronousMethods()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+
+            await VersionFive.AsynchronousMethods.AsyncMethod();
         }
 
         [Test]
