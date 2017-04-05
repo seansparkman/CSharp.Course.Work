@@ -25,7 +25,30 @@ namespace CSharp.Course.Work
             Assert.AreEqual(int1, var1);
             Assert.AreEqual(int1.GetType(), var1.GetType());
         }
+        
+        /// <summary>
+        /// https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer
+        /// </summary>
+        [Test]
+        public void ObjectInitializers()
+        {
+            // Assert.Ignore();
 
+            var obj = new VersionThree.ObjectInitializer
+            {
+                StringProperty = "This is a string",
+                IntProperty = 42,
+                ObjectProperty = new VersionThree.ObjectInitializer2
+                {
+                    AnotherProperty = "Yes, another property"
+                }
+            };
+
+            Assert.AreEqual("This is a string", obj.StringProperty);
+            Assert.AreEqual(42, obj.IntProperty);
+            Assert.IsNotNull(obj.ObjectProperty);
+            Assert.AreEqual("Yes, another property", obj.ObjectProperty.AnotherProperty);
+        }
         [Test]
         public void ObjectAndCollectionInitializers()
         {
