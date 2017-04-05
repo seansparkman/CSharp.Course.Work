@@ -49,10 +49,21 @@ namespace CSharp.Course.Work
             Assert.IsNotNull(obj.ObjectProperty);
             Assert.AreEqual("Yes, another property", obj.ObjectProperty.AnotherProperty);
         }
+
+        /// <summary>
+        /// https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/classes-and-structs/object-and-collection-initializers
+        /// </summary>
         [Test]
-        public void ObjectAndCollectionInitializers()
+        public void CollectionInitializers()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+
+            List<int> listOfInt = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            CollectionAssert.IsNotEmpty(listOfInt);
+            Assert.IsTrue(listOfInt.Contains(1));
+            Assert.IsTrue(listOfInt.Contains(5));
+            Assert.IsTrue(listOfInt.Contains(10));
         }
 
         [Test]
