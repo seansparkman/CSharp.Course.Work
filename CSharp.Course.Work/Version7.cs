@@ -31,7 +31,41 @@ namespace CSharp.Course.Work
         [Test]
         public void TypeSwitch()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+
+            var listOfObjs = new List<VersionSeven.TypeSwitchA>
+            {
+                new VersionSeven.TypeSwitchA(),
+                new VersionSeven.TypeSwitchB(),
+                new VersionSeven.TypeSwitchC(),
+            };
+            var listOfAnswers = new List<string>();
+
+            foreach(var item in listOfObjs)
+            {
+                switch(item)
+                {
+                    case VersionSeven.TypeSwitchC c:
+                        listOfAnswers.Add("C");
+                        break;
+                    case VersionSeven.TypeSwitchB b:
+                        listOfAnswers.Add("B");
+                        break;
+                    case VersionSeven.TypeSwitchA a:
+                        listOfAnswers.Add("A");
+                        break;
+
+                    // uncomment to see the compiler error
+
+                    //case VersionSeven.TypeSwitchB b:
+                    //    listOfAnswers.Add("B");
+                    //    break;
+                }
+            }
+
+            Assert.AreEqual("A", listOfAnswers[0]);
+            Assert.AreEqual("B", listOfAnswers[1]);
+            Assert.AreEqual("C", listOfAnswers[2]);
         }
 
         [Test]
