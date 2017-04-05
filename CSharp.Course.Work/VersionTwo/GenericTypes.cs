@@ -11,7 +11,7 @@ namespace CSharp.Course.Work.VersionTwo
     {
         int Page { get; set; }
         int PageSize { get; set; }
-        List<T> Results { get; set; }
+        // TODO: implement Results property of List<T>
     }
 
     public interface IRequest
@@ -38,7 +38,8 @@ namespace CSharp.Course.Work.VersionTwo
                 {
                     Page = request.Page,
                     PageSize = request.PageSize,
-                    Results = new List<T>()
+                    // TODO: Uncomment next line
+                    // Results = new List<T>()
                 };
             });
         }

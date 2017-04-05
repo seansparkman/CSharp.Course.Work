@@ -13,15 +13,14 @@ namespace CSharp.Course.Work.VersionTwo
     {
         public string FirstClass()
         {
-            return SecondClass();
+            // TODO: return SecondClass results and comment out exception
+            throw new NotImplementedException();
+            //return SecondClass();
         }
     }
 
     public partial class PartialClass
     {
-        public string SecondClass()
-        {
-            return "Partial Class 2";
-        }
+        // TODO: implement method SecondClass and reutrn "Partial Class 2"
     }
 }

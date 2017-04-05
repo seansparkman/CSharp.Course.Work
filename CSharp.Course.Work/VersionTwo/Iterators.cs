@@ -15,15 +15,10 @@ namespace CSharp.Course.Work.VersionTwo
 
         public int Iterations { get; set; }
 
-        public IEnumerable<int> GetEnumerator()
-        {
-            Iterations++;
-            yield return 3;
-            Iterations++;
-            yield return 5;
-            Iterations++;
-            yield return 7;
-            Iterations++;
-        }
+        //public IEnumerable<int> GetEnumerator()
+        //{
+        //    // TODO: implement yield return of 3, 5 and then 7,
+        //    // increment Iterations before, between and after the yields
+        //}
     }
 }

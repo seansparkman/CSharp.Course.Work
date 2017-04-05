@@ -8,10 +8,7 @@ namespace CSharp.Course.Work.VersionTwo
 {
     public class GenericMethod
     {
-        public static T Result<T>() where T : GenericMethodClassA, new()
-        {
-            return new T();
-        }
+        // implement static method Result of Type T where T is GenericMethodClassA and new-able
     }
 
     public class GenericMethodClassA

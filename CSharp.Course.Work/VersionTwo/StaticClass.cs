@@ -8,9 +8,6 @@ namespace CSharp.Course.Work.VersionTwo
 {
     public static class StaticClass
     {
-        public static bool GetSuccess()
-        {
-            return true;
-        }
+        // implement static method GetSuccess that returns true
     }
 }

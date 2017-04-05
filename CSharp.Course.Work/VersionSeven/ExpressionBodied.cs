@@ -9,6 +9,7 @@ namespace CSharp.Course.Work.VersionSeven
     public class ExpressionBodied
     {
         public ExpressionBodied(string value) => this.Value = value;
+        ~ExpressionBodied() => Console.WriteLine("FINALLY DONE");
 
         private string value;
 

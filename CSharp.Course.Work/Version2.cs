@@ -23,13 +23,14 @@ namespace CSharp.Course.Work
         [Test]
         public void GenericMethod()
         {
-            //Assert.Ignore();
+            Assert.Ignore();
 
-            var a = VersionTwo.GenericMethod.Result<VersionTwo.GenericMethodClassA>();
-            var b = VersionTwo.GenericMethod.Result<VersionTwo.GenericMethodClassB>();
+            // TODO: Uncomment these lines
+            //var a = VersionTwo.GenericMethod.Result<VersionTwo.GenericMethodClassA>();
+            //var b = VersionTwo.GenericMethod.Result<VersionTwo.GenericMethodClassB>();
 
-            Assert.AreEqual("A", a.Result());
-            Assert.AreEqual("B", b.Result());
+            //Assert.AreEqual("A", a.Result());
+            //Assert.AreEqual("B", b.Result());
         }
 
         /// <summary>
@@ -39,18 +40,19 @@ namespace CSharp.Course.Work
         [Test]
         public async Task GenericType()
         {
-            //Assert.Ignore();
+            Assert.Ignore();
 
-            var handler = new VersionTwo.GenericHandlerAsync<string>();
-            var result = await handler.HandleAsync(new VersionTwo.Request
-            {
-                Page = 1,
-                PageSize = 20
-            });
+            // TODO: Uncomment these lines
+            //var handler = new VersionTwo.GenericHandlerAsync<string>();
+            //var result = await handler.HandleAsync(new VersionTwo.Request
+            //{
+            //    Page = 1,
+            //    PageSize = 20
+            //});
 
-            Assert.AreEqual(1, result.Page);
-            Assert.AreEqual(20, result.PageSize);
-            Assert.IsTrue(result.Results is List<string>);
+            //Assert.AreEqual(1, result.Page);
+            //Assert.AreEqual(20, result.PageSize);
+            //Assert.IsTrue(result.Results is List<string>);
         }
 
         /// <summary>
@@ -59,11 +61,11 @@ namespace CSharp.Course.Work
         [Test]
         public void PartialTypes()
         {
-            // Assert.Ignore();
+            Assert.Ignore();
 
             var partialClass = new VersionTwo.PartialClass();
 
-            Assert.AreEqual("Partial Class 2", partialClass.FirstClass());
+            // Assert.AreEqual("Partial Class 2", partialClass.FirstClass());
         }
 
         /// <summary>
@@ -73,12 +75,13 @@ namespace CSharp.Course.Work
         [Test]
         public void AnonymousMethods()
         {
-            // Assert.Ignore();
+            Assert.Ignore();
 
             var anonymousMethods = new VersionTwo.AnonymousMethods();
 
             var didWork = false;
-            anonymousMethods.Worked += delegate (object sender, EventArgs args) { didWork = true; };
+            // TODO: subscribe to anonymousMethods.Worked with a anonymous method delegate,
+            // set didWork to true in the body
 
             Assert.False(didWork);
 
@@ -92,25 +95,25 @@ namespace CSharp.Course.Work
         [Test]
         public void Iterators()
         {
-            // Assert.Ignore();
+            Assert.Ignore();
             var iterator = new VersionTwo.Iterators();
 
             Assert.AreEqual(0, iterator.Iterations);
-            foreach(var item in iterator.GetEnumerator())
-            {
-                if (iterator.Iterations == 1)
-                {
-                    Assert.AreEqual(3, item);
-                }
-                else if (iterator.Iterations == 2)
-                {
-                    Assert.AreEqual(5, item);
-                }
-                else if (iterator.Iterations == 3)
-                {
-                    Assert.AreEqual(7, item);
-                }
-            }
+            //foreach(var item in iterator.GetEnumerator())
+            //{
+            //    if (iterator.Iterations == 1)
+            //    {
+            //        Assert.AreEqual(3, item);
+            //    }
+            //    else if (iterator.Iterations == 2)
+            //    {
+            //        Assert.AreEqual(5, item);
+            //    }
+            //    else if (iterator.Iterations == 3)
+            //    {
+            //        Assert.AreEqual(7, item);
+            //    }
+            //}
             Assert.AreEqual(4, iterator.Iterations);
         }
 
@@ -120,41 +123,41 @@ namespace CSharp.Course.Work
         [Test]
         public void NullableTypes()
         {
-            // Assert.Ignore();
-            DateTime? nullableDateTime = null;
-            Assert.False(nullableDateTime.HasValue);
+            Assert.Ignore();
+            // TODO: Declare nullableDateTime as nullable DateTime and do not assign a value
+            //Assert.False(nullableDateTime.HasValue);
 
 
-            DateTime nonnullableDateTime = DateTime.UtcNow;
-            Assert.AreNotEqual(nonnullableDateTime, nullableDateTime);
+            //DateTime nonnullableDateTime = DateTime.UtcNow;
+            //Assert.AreNotEqual(nonnullableDateTime, nullableDateTime);
 
-            nullableDateTime = nonnullableDateTime;
-            Assert.True(nullableDateTime.HasValue);
-            Assert.AreEqual(nonnullableDateTime, nullableDateTime);
-            Assert.True(nonnullableDateTime == nullableDateTime);            
+            //nullableDateTime = nonnullableDateTime;
+            //Assert.True(nullableDateTime.HasValue);
+            //Assert.AreEqual(nonnullableDateTime, nullableDateTime);
+            //Assert.True(nonnullableDateTime == nullableDateTime);            
         }
 
         [Test]
         public void GetterSetterSeparateAccessibility()
         {
-            // Assert.Ignore();
+            Assert.Ignore();
             var accessibility = new VersionTwo.GetterSetterSeparateAccessibility();
-            accessibility.Value2 = 2;
+            //accessibility.Value2 = 2;
 
-            Assert.AreEqual(1, accessibility.Value1);
-            Assert.AreEqual(2, accessibility.GetValue2());
+            //Assert.AreEqual(1, accessibility.Value1);
+            //Assert.AreEqual(2, accessibility.GetValue2());
         }
 
         [Test]
         public void MethodGroupConversions()
         {
-            // Assert.Ignore();
+            Assert.Ignore();
             var methodGroup = new VersionTwo.MethodGroupConversions
             {
                 Value = "original"
             };
 
-            methodGroup.DoSomething(methodGroup.Work);
+            // Call DoSomething on methodGroup and pass in methodGroupd.Work
 
             Assert.AreEqual("original did work", methodGroup.Value);
         }
@@ -165,12 +168,12 @@ namespace CSharp.Course.Work
         [Test]
         public void StaticClasses()
         {
-            // Assert.Ignore();
+            Assert.Ignore();
 
             // uncomment this to see the compiler error
             // var staticClass = new VersionTwo.StaticClass();
 
-            Assert.IsTrue(VersionTwo.StaticClass.GetSuccess());
+            // Assert.IsTrue(VersionTwo.StaticClass.GetSuccess());
         }
     }
 }
