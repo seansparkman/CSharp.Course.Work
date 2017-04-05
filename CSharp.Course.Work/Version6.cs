@@ -10,6 +10,12 @@ namespace CSharp.Course.Work
     [TestFixture]
     public class Version6
     {
+        [SetUp]
+        public void SetUp()
+        {
+            Setup.Results.Add(TestContext.CurrentContext.Result);
+        }
+
         /// <summary>
         /// 
         /// </summary>

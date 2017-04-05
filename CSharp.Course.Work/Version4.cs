@@ -11,6 +11,12 @@ namespace CSharp.Course.Work
     [TestFixture]
     public class Version4
     {
+        [SetUp]
+        public void SetUp()
+        {
+            Setup.Results.Add(TestContext.CurrentContext.Result);
+        }
+
         /// <summary>
         /// https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects
         /// </summary>

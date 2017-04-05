@@ -10,6 +10,12 @@ namespace CSharp.Course.Work
     [TestFixture]
     public class Version7
     {
+        [SetUp]
+        public void SetUp()
+        {
+            Setup.Results.Add(TestContext.CurrentContext.Result);
+        }
+
         [Test]
         public void BinaryLiterals()
         {

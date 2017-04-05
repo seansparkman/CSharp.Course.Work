@@ -12,6 +12,12 @@ namespace CSharp.Course.Work
     [TestFixture]
     public class Version3
     {
+        [SetUp]
+        public void SetUp()
+        {
+            Setup.Results.Add(TestContext.CurrentContext.Result);
+        }
+
         [Test]
         public void ImplicitlyTypedLocalVariables()
         {
