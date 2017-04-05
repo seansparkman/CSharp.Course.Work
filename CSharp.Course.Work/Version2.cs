@@ -159,6 +159,9 @@ namespace CSharp.Course.Work
             Assert.AreEqual("original did work", methodGroup.Value);
         }
 
+        /// <summary>
+        /// https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members
+        /// </summary>
         [Test]
         public void StaticClasses()
         {
