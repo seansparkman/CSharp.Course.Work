@@ -168,7 +168,12 @@ namespace CSharp.Course.Work
         [Test]
         public void PartialMethods()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+
+            var partialMethod = new PartialMethodClass();
+            partialMethod.Load(42);
+
+            Assert.AreEqual(42, partialMethod.Value);
         }
 
     }

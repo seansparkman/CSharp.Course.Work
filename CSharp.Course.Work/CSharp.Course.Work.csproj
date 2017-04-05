@@ -59,6 +59,7 @@
     <Compile Include="VersionThree\AutoImplementedProperties.cs" />
     <Compile Include="VersionThree\ExtensionMethods.cs" />
     <Compile Include="VersionThree\ObjectInitializer.cs" />
+    <Compile Include="VersionThree\PartialMethods.cs" />
     <Compile Include="VersionTwo\AnonymousMethods.cs" />
     <Compile Include="VersionTwo\GenericMethod.cs" />
     <Compile Include="Version5.cs" />
