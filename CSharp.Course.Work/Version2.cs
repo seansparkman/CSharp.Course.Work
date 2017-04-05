@@ -86,10 +86,32 @@ namespace CSharp.Course.Work
             Assert.True(didWork);
         }
 
+        /// <summary>
+        /// https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/concepts/iterators
+        /// </summary>
         [Test]
         public void Iterators()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+            var iterator = new VersionTwo.Iterators();
+
+            Assert.AreEqual(0, iterator.Iterations);
+            foreach(var item in iterator.GetEnumerator())
+            {
+                if (iterator.Iterations == 1)
+                {
+                    Assert.AreEqual(3, item);
+                }
+                else if (iterator.Iterations == 2)
+                {
+                    Assert.AreEqual(5, item);
+                }
+                else if (iterator.Iterations == 3)
+                {
+                    Assert.AreEqual(7, item);
+                }
+            }
+            Assert.AreEqual(4, iterator.Iterations);
         }
 
         [Test]
