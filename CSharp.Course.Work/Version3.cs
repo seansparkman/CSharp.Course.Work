@@ -116,10 +116,20 @@ namespace CSharp.Course.Work
             Assert.AreEqual(91, wordCount);
         }
 
+        delegate int del(List<int> listOfInts, int x);
+        /// <summary>
+        /// https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/statements-expressions-operators/lambda-expressions
+        /// </summary>
         [Test]
         public void LambdaExpressions()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+
+            del indexOf = (list, x) => list.IndexOf(x);
+
+            var index = indexOf(new List<int> { 1, 2, 3 }, 2);
+
+            Assert.AreEqual(1, index);
         }
 
         [Test]
