@@ -66,10 +66,24 @@ namespace CSharp.Course.Work
             Assert.AreEqual("Partial Class 2", partialClass.FirstClass());
         }
 
+        /// <summary>
+        /// https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/delegates/index
+        /// https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/statements-expressions-operators/anonymous-methods
+        /// </summary>
         [Test]
         public void AnonymousMethods()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+
+            var anonymousMethods = new VersionTwo.AnonymousMethods();
+
+            var didWork = false;
+            anonymousMethods.Worked += delegate (object sender, EventArgs args) { didWork = true; };
+
+            Assert.False(didWork);
+
+            anonymousMethods.OnWorked(new EventArgs());
+            Assert.True(didWork);
         }
 
         [Test]
