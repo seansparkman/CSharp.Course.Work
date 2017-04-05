@@ -99,10 +99,22 @@ namespace CSharp.Course.Work
             Assert.AreEqual(42, p.y);
         }
 
+        /// <summary>
+        /// https://docs.microsoft.com/en-us/dotnet/articles/csharp/whats-new/csharp-7#out-variables
+        /// </summary>
         [Test]
         public void OutVar()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+
+            if (int.TryParse("42", out int result))
+            {
+                Assert.AreEqual(42, result);
+            }
+            else
+            {
+                Assert.Fail();
+            }
         }
 
         [Test]
