@@ -162,7 +162,12 @@ namespace CSharp.Course.Work
         [Test]
         public void StaticClasses()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+
+            // uncomment this to see the compiler error
+            // var staticClass = new VersionTwo.StaticClass();
+
+            Assert.IsTrue(VersionTwo.StaticClass.GetSuccess());
         }
     }
 }
