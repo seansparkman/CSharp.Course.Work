@@ -132,6 +132,17 @@ namespace CSharp.Course.Work
             Assert.AreEqual(1, index);
         }
 
+        delegate Task AsyncLambdaExpression(int i);
+        [Test]
+        public async Task AsyncLambdaExpressions()
+        {
+            // Assert.Ignore();
+
+            AsyncLambdaExpression asyncLambda = async (int i) => { await Task.Delay(1); };
+
+            await asyncLambda(1);
+        }
+
         [Test]
         public void ExpressionTrees()
         {
