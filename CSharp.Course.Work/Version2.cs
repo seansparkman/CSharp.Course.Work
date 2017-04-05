@@ -117,7 +117,18 @@ namespace CSharp.Course.Work
         [Test]
         public void NullableTypes()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+            DateTime? nullableDateTime = null;
+            Assert.False(nullableDateTime.HasValue);
+
+
+            DateTime nonnullableDateTime = DateTime.UtcNow;
+            Assert.AreNotEqual(nonnullableDateTime, nullableDateTime);
+
+            nullableDateTime = nonnullableDateTime;
+            Assert.True(nullableDateTime.HasValue);
+            Assert.AreEqual(nonnullableDateTime, nullableDateTime);
+            Assert.True(nonnullableDateTime == nullableDateTime);            
         }
 
         [Test]
