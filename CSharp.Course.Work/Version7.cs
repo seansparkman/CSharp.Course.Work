@@ -85,10 +85,18 @@ namespace CSharp.Course.Work
             Assert.AreEqual('d', results[3]);
         }
 
+        /// <summary>
+        /// https://docs.microsoft.com/en-us/dotnet/articles/csharp/whats-new/csharp-7#tuples
+        /// </summary>
         [Test]
         public void NamedTuples()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+
+            (int x, int y) p = VersionSeven.NamedTuples.GetPoint();
+
+            Assert.AreEqual(7, p.x);
+            Assert.AreEqual(42, p.y);
         }
 
         [Test]
