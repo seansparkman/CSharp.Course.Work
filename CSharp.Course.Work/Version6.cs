@@ -86,7 +86,12 @@ namespace CSharp.Course.Work
         [Test]
         public void NullPropagator()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+
+            var obj = new VersionSix.NullPropagator();
+
+            Assert.IsNull(obj?.StringProperty?.Length);
+            Assert.AreEqual(0, obj?.StringProperty?.Length);
         }
 
         [Test]
