@@ -71,7 +71,15 @@ namespace CSharp.Course.Work
         [Test]
         public void RefReturns()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+            char[] results = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToArray();
+
+            Assert.AreEqual('D', results[3]);
+            
+            ref var d = ref VersionSeven.RefReturns.GetRef(results, 3);
+            d = 'd';
+
+            Assert.AreEqual('d', results[3]);
         }
 
         [Test]

@@ -57,6 +57,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="VersionSeven\LocalFunctions.cs" />
+    <Compile Include="VersionSeven\RefReturns.cs" />
     <Compile Include="VersionSeven\TypeSwitches.cs" />
     <Compile Include="VersionSix\AutoPropertyInitializers.cs" />
     <Compile Include="VersionFive\AsynchronousMethods.cs" />
