@@ -60,6 +60,7 @@
     <Compile Include="VersionFive\AsynchronousMethods.cs" />
     <Compile Include="VersionFive\CallInfoAttributes.cs" />
     <Compile Include="VersionSix\ExpressionBodiedMembers.cs" />
+    <Compile Include="VersionSix\NameofOperator.cs" />
     <Compile Include="VersionSix\NullPropagator.cs" />
     <Compile Include="VersionThree\AutoImplementedProperties.cs" />
     <Compile Include="VersionThree\ExtensionMethods.cs" />

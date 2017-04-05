@@ -109,7 +109,12 @@ namespace CSharp.Course.Work
         [Test]
         public void NameofOperator()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+
+            var obj = new VersionSix.NameofOperator();
+
+            Assert.AreEqual("StringProperty", obj.StringProperty);
+            Assert.AreEqual("IntProperty", obj.IntProperty);
         }
 
         [Test]
