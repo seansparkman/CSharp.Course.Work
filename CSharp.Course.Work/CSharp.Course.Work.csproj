@@ -63,6 +63,7 @@
     <Compile Include="Version4.cs" />
     <Compile Include="Version6.cs" />
     <Compile Include="Version7.cs" />
+    <Compile Include="VersionTwo\GenericTypes.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

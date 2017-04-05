@@ -32,10 +32,25 @@ namespace CSharp.Course.Work
             Assert.AreEqual("B", b.Result());
         }
 
+        /// <summary>
+        /// https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/generics/generic-classes
+        /// https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/generics/generic-interfaces
+        /// </summary>
         [Test]
-        public void GenericClass()
+        public async Task GenericType()
         {
-            Assert.Ignore();
+            //Assert.Ignore();
+
+            var handler = new VersionTwo.GenericHandlerAsync<string>();
+            var result = await handler.HandleAsync(new VersionTwo.Request
+            {
+                Page = 1,
+                PageSize = 20
+            });
+
+            Assert.AreEqual(1, result.Page);
+            Assert.AreEqual(20, result.PageSize);
+            Assert.IsTrue(result.Results is List<string>);
         }
 
         [Test]
