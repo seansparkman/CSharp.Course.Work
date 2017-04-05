@@ -10,22 +10,26 @@ namespace CSharp.Course.Work
     [TestFixture]
     public class Version6
     {
-        [Test]
-        public void CompilerAsAservice()
-        {
-            Assert.Ignore();
-        }
-
-        [Test]
-        public void ImportOfStaticTypeMembersIntoNamespace()
-        {
-            Assert.Ignore();
-        }
-
+        /// <summary>
+        /// 
+        /// </summary>
         [Test]
         public void ExceptionFilters()
         {
-            Assert.Ignore();
+            // Assert.Ignore();
+
+            try
+            {
+                throw new ArgumentException("Invalid argument", "args");
+            }
+            catch(ArgumentException e) when (e.ParamName == "args")
+            {
+                Assert.Pass();
+            }
+            catch(ArgumentException e) when (e.ParamName != "args")
+            {
+                Assert.Fail();
+            }
         }
 
         [Test]
