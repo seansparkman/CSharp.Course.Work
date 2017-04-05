@@ -8,7 +8,8 @@ namespace CSharp.Course.Work.VersionThree
 {
     public class AutoImplementedProperties
     {
-        public string StringProperty { get; set; }
-        public int IntProperty { get; set; }
+        // TODO: implement the following properties with auto implemented properties
+        // StringProperty as string type
+        // IntProperty as int type
     }
 }

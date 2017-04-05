@@ -11,9 +11,9 @@ namespace CSharp.Course.Work.VersionThree
     /// </summary>
     public static class ExtensionMethods
     {
-        public static int WordCount(this String text)
-        {
-            return text.Split(new char[] { ' ', '.', '?', ',' }, StringSplitOptions.RemoveEmptyEntries).Length;
-        }
+        // TODO: Implement the static WordCount method to return int
+        // parameters are "this String text"
+        // here is the body of the method
+        // return text.Split(new char[] { ' ', '.', '?', ',' }, StringSplitOptions.RemoveEmptyEntries).Length;
     }
 }

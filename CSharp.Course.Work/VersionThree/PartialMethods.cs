@@ -8,19 +8,18 @@ namespace CSharp.Course.Work.VersionThree
 {
     partial class PartialMethodClass
     {
-        partial void PartialMethod(int x)
-        {
-            Value = x;
-        }
+        // TODO: Implement partial method PartialMethod that accepts int x
+        // assigned x to Value
     }
 
     partial class PartialMethodClass
     {
         public int Value { get; set; }
-        partial void PartialMethod(int x);
+        // TODO: Create partial method signature of PartialMethod that accepts int x
         public void Load(int x)
         {
-            PartialMethod(x);
+            // TODO: Uncomment the following lines
+            //PartialMethod(x);
         }
     }
 }
