@@ -94,6 +94,9 @@ namespace CSharp.Course.Work
             Assert.AreEqual(0, obj?.StringProperty?.Length ?? 0);
         }
 
+        /// <summary>
+        /// https://docs.microsoft.com/en-us/dotnet/articles/csharp/language-reference/keywords/interpolated-strings
+        /// </summary>
         [Test]
         public void StringInterpolation()
         {
@@ -106,6 +109,9 @@ namespace CSharp.Course.Work
             Assert.AreEqual("First: This is a string, 42, Second: Yes, another property", results);
         }
 
+        /// <summary>
+        /// https://docs.microsoft.com/en-us/dotnet/articles/csharp/language-reference/keywords/nameof
+        /// </summary>
         [Test]
         public void NameofOperator()
         {
